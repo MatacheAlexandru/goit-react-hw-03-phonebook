@@ -1,8 +1,37 @@
 .container {
-  font-family: Arial, sans-serif;
-  width: 50%;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .title {
-  font-size: 2vw;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333333;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
 }

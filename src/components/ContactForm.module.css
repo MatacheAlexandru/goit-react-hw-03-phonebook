@@ -1,48 +1,78 @@
 .form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 50vw;
-  padding: 3vw;
-  border: 0.2vw solid #ccc; /* O ramă în jurul întregului formular */
-  border-radius: 1vw; /* Colțuri rotunjite pentru formular */
+  gap: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 label {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 1vw;
-  font-size: 3vw;
-  font-weight: bold; /* Textul label-ului să fie bold */
+  font-size: 1rem;
+  color: #333333;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
 input {
-  padding: 1vw;
-  max-width: 40vw;
-  max-height: 5vw;
-  border: 0.2vw solid #6e6e6e; /* Rama vizibilă pentru input-uri */
-  border-radius: 0.4vw; /* Colțuri rotunjite pentru input-uri */
-  margin-bottom: 1.5vw; /* Spațiu între input-uri */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333333;
 }
 
-input:focus {
-  outline: none;
-  border-color: #0056b3; /* Schimbă culoarea ramei când input-ul este selectat */
+input::placeholder {
+  color: #aaa;
 }
 
 .add {
-  max-width: 20vw;
-  max-height: 7vw;
-  padding: 1vw;
-  font-size: 2vw;
-  background-color: #449cfa;
-  color: #fff;
+  padding: 10px 20px;
   border: none;
-  border-radius: 0.5vw;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
+  align-self: center;
+  transition: background-color 0.3s ease;
 }
 
 .add:hover {
   background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .form {
+    padding: 15px;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 10px;
+  }
+
+  input {
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 7px 14px;
+  }
 }

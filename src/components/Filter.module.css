@@ -1,11 +1,42 @@
 .filterLabel {
-  display: block;
-  margin-bottom: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 input {
-  font-size: 1vw;
-  padding: 0.5vw;
-  max-width: 40vw;
-  max-height: 5vw;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333333;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .filterLabel {
+    padding: 15px;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filterLabel {
+    padding: 10px;
+  }
+
+  input {
+    font-size: 0.8rem;
+  }
 }
